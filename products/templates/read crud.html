@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update crud html</title>
+</head>
+<body>
+    <h2>student Details</h2>
+    <form method="POST">
+        {%csrf_token%}
+        <label>Name</label>
+        <input type="text" name="Name">
+        <br>
+        <label>Course</label>
+        <input type="text" name="Course">
+        <br>
+        <label>Marks</label>
+        <input type="number" name="Marks">
+        <br>
+        <button>add student</button>
+    </form>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Marks</th>
+        </tr>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.name}}</td>
+            <td>{{ student.course}}</td>
+            <td>{{ student.marks}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>
