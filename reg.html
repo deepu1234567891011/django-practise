@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Registration</h1> 
+   <form method="POST">
+    {%csrf_token%}
+    <input type="text" placeholder="Enter user name" name="user_name"><br><br>
+    <input type="email" placeholder="Enter user email" name="user_mail"><br><br>
+    <input type="password" placeholder="Enter user password" autocomplete="new_password" name="user_password"><br><br>
+    <input type="confirm password" placeholder="Enter confirm password" name="confirm_password"><br><br>
+    <button type="submit">Submit</button>
+ </form>
+</body>
+</html>
